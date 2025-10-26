@@ -3,29 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music Library - Library</title>
+  <title>TuneFolio - Library</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts for Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons (for search) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">Music Library</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="genre.html">Genre</a></li>
-        <li><a href="library.html" class="active">Library</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+
+  <!-- Navigation - identical to index.html except active link -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="assets/img/logo/website logo.png" alt="TuneFolio Logo" class="website-logo me-2">
+        <span class="site-name">TuneFolio</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav custom-nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link active">Library</a></li>
+          <li class="nav-item"><a href="genre.html" class="nav-link">Genres</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <main class="container">
-    <h1>Library</h1>
-    <p>Your music collection will appear here.</p>
+  <main class="container py-5">
+  <h1 class="featured-playlists-title mb-4">Library</h1>
+
+  <!-- Search bar -->
+  <div class="row mb-4 justify-content-center">
+    <div class="col-md-6">
+      <form class="position-relative">
+        <input class="form-control searchbox ps-5" type="search" placeholder="Search library..." aria-label="Search">
+        <span class="position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary">
+          <i class="bi bi-search"></i>
+        </span>
+      </form>
+    </div>
+  </div>
+
+  <!-- Playlists Row: horizontal flex layout -->
+    <div class="library-playlists-row">
+      <!-- Playlist 1 -->
+      <div class="playlist-box">
+        <div class="playlist-heading">Band-aid for the Soul</div>
+          <div class="playlist-card-dark">
+          <div class="playlist-scroll">
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/akap.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Akap</strong>
+              <span class="text-light small">Imago</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Akap - Imago.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/first of summer.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">First of Summer</strong>
+              <span class="text-light small">Urbandub</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Urbandub - First Of Summer.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/same ground.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Same Ground</strong>
+              <span class="text-light small">Kitchie Nadal</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Same Ground - Kitchie Nadal.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/soul searching.png" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Soul Searching</strong>
+              <span class="text-light small">Urbandub</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Urbandub - Soul Searching.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/stars.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Stars</strong>
+              <span class="text-light small">Callalily</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Stars - Callalily.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/sunday driving.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Sunday Driving</strong>
+              <span class="text-light small">Rico Blanco</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Sunday Driving - rico blanco.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/tagpuan.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Tagpuan</strong>
+              <span class="text-light small">Kamikazee</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/Tagpuan - Kamikazee.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/these days.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">These Days</strong>
+              <span class="text-light small">Bamboo</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/These Days - Bamboo.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/torres.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Torres</strong>
+              <span class="text-light small">Mayonnaise</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/mayonnaise - torres.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Band-aid for the Soul/tulad ng dati.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Tulad ng Dati</strong>
+              <span class="text-light small">The Dawn</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Band-aid for the Soul/The Dawn - Tulad Ng Dati.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <!-- Add more song-card blocks as needed -->
+        </div>
+      </div>
+      <!-- Playlist 2 -->
+      <div class="playlist-box">
+        <div class="playlist-heading">Emo in Echoes</div>
+          <div class="playlist-card-dark">
+          <div class="playlist-scroll">
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/brick by boring - paramore.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Brick by Boring Brick</strong>
+              <span class="text-light small">Paramore</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/brick by boring - paramore.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/Sugar, We're Goin Down.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Sugar, We're Going Down</strong>
+              <span class="text-light small">Fall Out Boy</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Sugar, We're Goin Down.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/Swing, Swing.png" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Swing Swingn</strong>
+              <span class="text-light small">All American Rejects</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Swing, Swing.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/Typecast Boston Drama.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Boston Drama</strong>
+              <span class="text-light small">Typecast</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Typecast Boston Drama Lyrics.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/Until the Day I Die.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Until the Day I Die</strong>
+              <span class="text-light small">Story of the Year</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Until the Day I Die.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/vindicated.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Vindicated</strong>
+              <span class="text-light small">Dashboard Confessional</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Vindicated.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/voices.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Voices</strong>
+              <span class="text-light small">Saosin</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/Voices.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Emo in Echoes/You Found Me.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">You Found Me</strong>
+              <span class="text-light small">The Fray</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Emo in Echoes/You Found Me.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <!-- more songs... -->
+        </div>
+      </div>
+      <!-- Playlist 3 -->
+      <div class="playlist-box">
+        <div class="playlist-heading">Hugot Sa Jeep</div>
+          <div class="playlist-card-dark">
+          <div class="playlist-scroll">
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Clarity.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Clarity</strong>
+              <span class="text-light small">Zedd</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Clarity.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Maki - Saan.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Saan</strong>
+              <span class="text-light small">Maki</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Maki - Saan.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Roses.png" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Roses</strong>
+              <span class="text-light small">The Chainsmokers</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Roses.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Señorita.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Señorita</strong>
+              <span class="text-light small">Justin Timberlake</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Señorita.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Tattoo.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Tattoo</strong>
+              <span class="text-light small">Jordin Sparks</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Tattoo.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/What's Luv.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">What's Luv</strong>
+              <span class="text-light small">Fat Joe ft. Ashanti</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/What's Luv.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/Where Is the Love.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">Where is the Love</strong>
+              <span class="text-light small">Black Eyed Peas</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/Where Is the Love.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="song-card d-flex align-items-center mb-3">
+            <img src="assets/img/library/Hugot Sa Jeep/You And I Both.jpg" alt="Album art" class="library-album-art rounded me-3">
+            <div class="flex-grow-1">
+              <strong class="d-block">You and I Both</strong>
+              <span class="text-light small">Jason Mraz</span>
+              <audio controls class="w-100 mt-1">
+                <source src="assets/audio/library/Hugot Sa Jeep/You And I Both.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <!-- more songs... -->
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Music Library. All rights reserved.</p>
+  <footer class="text-center py-3 border-top mt-5 text-light-50">
+    <p>&copy; 2025 TuneFolio. All rights reserved.</p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
