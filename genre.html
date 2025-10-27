@@ -3,35 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music Library - Genre</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>TuneFolio - Genres</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Genre Page CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">Music Library</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="genre.html" class="active">Genre</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="assets/img/logo/website logo.png" alt="TuneFolio Logo" class="website-logo me-2">
+        <span class="site-name">TuneFolio</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav custom-nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link">Library</a></li>
+          <li class="nav-item"><a href="genre.html" class="nav-link active">Genres</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <main class="container">
-    <h1>Genres</h1>
-    <ul class="genre-list">
-      <li>Jazz</li>
-      <li>Pop</li>
-      <li>Rock</li>
-      <li>Hip Hop</li>
-      <li>Classical</li>
-    </ul>
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h1 class="text-light text-center mb-5">Browse by Genre</h1>
+
+      <!-- 🎸 ALTERNATIVE GENRE -->
+    <div class="container mt-4">
+      <h2 class="genre-heading mb-3">Alternative</h2>
+
+      <div class="genre-box">
+        <button class="genre-scroll-btn left" onclick="scrollGenre(this, -1)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="genre-row" id="alternative-row">
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/be like that.jpg" alt="be like that" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Be Like That.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Be Like That</p>
+              <p class="genre-artist-name">3 Doors Down</p>
+            </div>
+          </div>
+          <!-- End of Song Card -->
+
+            <!-- 💡 TO ADD MORE SONGS, DUPLICATE THE BLOCK ABOVE AND UPDATE IMAGE + MP3 PATH -->
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/can't stop.jpg" alt="can't stop" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Cant Stop.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Can't Stop</p>
+              <p class="genre-artist-name">Red Hot Chili Pepper</p>
+            </div>
+          </div>
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/chasing cars.jpg" alt="chasing cars" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Chasing Cars.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Chasing Cars</p>
+              <p class="genre-artist-name">The Fray</p>
+            </div>
+          </div>
+            
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/dare you to move.jpg" alt="dare you to move" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Dare You to Move.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Dare You to Move</p>
+              <p class="genre-artist-name">Switchfoot</p>
+            </div>
+          </div>
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/drive.jpg" alt="drive" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Drive.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Drive</p>
+              <p class="genre-artist-name">Incubus</p>
+            </div>
+          </div>
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/huling sandali.jpg" alt="huling sandali" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/December Avenue - Huling Sandali.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Huling Sandali</p>
+              <p class="genre-artist-name">December Avenue</p>
+            </div>
+          </div>
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/it ends tonight.JPG" alt="it ends tonight" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/It Ends Tonight.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">It Ends Tonight</p>
+              <p class="genre-artist-name">All American Rejects</p>
+            </div>
+          </div>
+
+          <!-- Song Block -->
+          <div class="genre-song-card">
+            <div class="genre-song-img-container">
+              <img src="assets/img/genre/alternative/Wherever You Will Go.jpg" alt="wherever you will go" class="genre-song-img">
+
+              <!-- Play/Pause Overlay -->
+              <div class="genre-play-overlay">
+                <i class="bi bi-play-fill"></i>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="genre-progress-bar-container">
+                <div class="genre-progress-bar"></div>
+              </div>
+
+              <!-- Audio -->
+              <audio src="assets/audio/genre/alternative/Wherever You Will Go.mp3"></audio>
+            </div>
+
+            <!-- Song Info -->
+            <div class="genre-song-info">
+              <p class="genre-song-title">Wherever You Will Go</p>
+              <p class="genre-artist-name">The Calling</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="genre-scroll-btn right" onclick="scrollGenre(this, 1)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div> 
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Music Library. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="text-center py-3 border-top mt-5 text-light-50">
+    <p>&copy; 2025 TuneFolio. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="genre.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const playOverlays = document.querySelectorAll('.genre-play-overlay');
+    let currentAudio = null;
+
+    playOverlays.forEach(overlay => {
+      const songCard = overlay.closest('.genre-song-card');
+      const audio = songCard.querySelector('audio');
+      const progressContainer = songCard.querySelector('.genre-progress-bar-container');
+      const progressBar = songCard.querySelector('.genre-progress-bar');
+      const icon = overlay.querySelector('i');
+
+      // Play/Pause toggle
+      overlay.addEventListener('click', () => {
+        if (currentAudio && currentAudio !== audio) {
+          currentAudio.pause();
+          const prevIcon = currentAudio.closest('.genre-song-card')
+                                       .querySelector('.genre-play-overlay i');
+          prevIcon.classList.replace('bi-pause-fill', 'bi-play-fill');
+        }
+
+        if (audio.paused) {
+          audio.play();
+          icon.classList.replace('bi-play-fill', 'bi-pause-fill');
+          currentAudio = audio;
+        } else {
+          audio.pause();
+          icon.classList.replace('bi-pause-fill', 'bi-play-fill');
+        }
+      });
+
+      // Update progress bar
+      audio.addEventListener('timeupdate', () => {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${progress}%`;
+      });
+
+      // Seek on click
+      progressContainer.addEventListener('click', (e) => {
+        const rect = progressContainer.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const newTime = (offsetX / rect.width) * audio.duration;
+        audio.currentTime = newTime;
+      });
+
+      // Reset when song ends
+      audio.addEventListener('ended', () => {
+        icon.classList.replace('bi-pause-fill', 'bi-play-fill');
+        progressBar.style.width = '0%';
+        currentAudio = null;
+      });
+    });
+  });
+  </script>
+
 </body>
 </html>
