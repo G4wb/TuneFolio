@@ -85,7 +85,9 @@ TuneFolio/
 
 ### Adding New Music
 Add audio files to asset/audio/directory
+
 Add corresponding images to assets/img/directory
+
 Update the JavaScript files with new track metadata
 
 📱 Responsive Design
