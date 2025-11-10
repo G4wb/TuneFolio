@@ -1,0 +1,228 @@
+/* ===== LIBRARY PAGE ONLY ===== */
+
+.playlist-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 15px;
+  padding: 8px 0;
+  border-bottom: 2px solid #333;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-title-text {
+  flex-grow: 1;
+}
+
+.playlist-card-dark {
+  background: rgba(255, 255, 255, 0.05); /* Changed from #101010 to translucent */
+  border-radius: 22px;
+  width: 300px;
+  padding: 16px;
+  box-shadow: 0 4px 18px 2px rgba(0,0,0,0.17);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px); /* Added for better glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Added subtle border */
+}
+
+.playlist-card-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background: rgba(255, 255, 255, 0.08); /* Slightly more opaque on hover */
+}
+
+.playlist-scroll {
+  overflow-y: auto;
+  max-height: 430px;
+  padding-right: 5px;
+}
+
+.playlist-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.playlist-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Updated to match translucent theme */
+  border-radius: 3px;
+}
+
+.playlist-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Updated to match translucent theme */
+  border-radius: 3px;
+}
+
+.playlist-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5); /* Updated to match translucent theme */
+}
+
+.song-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Updated border color */
+  padding-bottom: 12px;
+  margin-bottom: 11px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.song-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.library-album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.library-playlists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.library-playlists-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 34px;
+}
+
+.playlist-box {
+  flex: 0 0 auto;
+}
+
+/* Style for Liked Songs playlist */
+.liked-playlist .playlist-heading {
+  color: #ff6b6b;
+  border-bottom-color: #ff6b6b;
+}
+
+.liked-playlist .playlist-card-dark {
+  border: 2px solid rgba(255, 107, 107, 0.3);
+  background: rgba(255, 107, 107, 0.05); /* Special translucent red for liked playlist */
+}
+
+/* Remove song button styles */
+.remove-song-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #ff6b6b;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.song-card:hover .remove-song-btn {
+  opacity: 1;
+}
+
+.remove-song-btn:hover {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff4444;
+}
+
+/* Remove playlist button */
+.remove-playlist-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.remove-playlist-btn:hover {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  opacity: 1;
+}
+
+/* Don't show remove button for default playlists */
+.default-playlist .remove-playlist-btn {
+  display: none;
+}
+
+/* Empty state styling */
+.empty-playlist {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6); /* Updated to translucent theme */
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.empty-playlist .bi {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Animation for newly added songs */
+@keyframes highlightNew {
+  0% { 
+    background-color: rgba(255, 107, 107, 0.3);
+    transform: scale(1.02);
+  }
+  100% { 
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+.song-card.new-song {
+  animation: highlightNew 1.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .library-playlists-row {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-playlists-row {
+    gap: 20px;
+  }
+  
+  .playlist-card-dark {
+    width: 280px;
+  }
+  
+  .playlist-scroll {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .library-playlists-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .playlist-box {
+    width: 100%;
+    max-width: 300px;
+  }
+}

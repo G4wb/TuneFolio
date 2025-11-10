@@ -1,0 +1,78 @@
+/* ===== GLOBAL STYLES (shared across all pages) ===== */
+
+/* Colors & Font */
+:root {
+  --dark-burgundy: #4b1010;
+  --light-text: #eeeeee;
+  --accent: #b22222;
+}
+
+body {
+  background-color: var(--dark-burgundy);
+  color: var(--light-text);
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: var(--dark-burgundy) !important;
+  padding: 1rem 0;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand,
+.site-name {
+  color: var(--light-text);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Website Logo beside site name */
+.website-logo {
+  width: 45px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.custom-nav-links {
+  display: flex;
+  gap: 36px;
+}
+
+.custom-nav-links .nav-link {
+  text-decoration: none !important;
+  color: var(--light-text) !important;
+  padding: 8px 22px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.custom-nav-links .nav-link:hover,
+.custom-nav-links .nav-link.active {
+  background: rgba(178,34,34,0.22);
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  padding: 1rem 0;
+  border-top: 1px solid #551414;
+  margin-top: 3rem;
+}
