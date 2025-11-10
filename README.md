@@ -15,7 +15,7 @@ A modern, responsive web application for music discovery and playlist management
 Check out the live website: [TuneFolio on GitHub Pages](https://your-username.github.io/your-repo-name/)
 
 ## 📁 Project Structure
-
+```
 TuneFolio/
 ├── 📄 HTML Files
 │ ├── index.html # Homepage with featured music
@@ -48,7 +48,7 @@ TuneFolio/
 │
 └── 📖 Documentation
 └── README.md # This file
-
+```
 
 ## 🛠️ Technologies Used
 
@@ -83,11 +83,9 @@ TuneFolio/
 - Technology stack
 - Copyright disclaimer
 
-Adding New Music
-Add audio files to audio/featured/ directory
-
-Add corresponding images to assets/img/featured/
-
+### Adding New Music
+Add audio files to asset/audio/directory
+Add corresponding images to assets/img/directory
 Update the JavaScript files with new track metadata
 
 📱 Responsive Design
