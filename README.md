@@ -2,8 +2,6 @@
 
 A modern, responsive web application for music discovery and playlist management. TuneFolio helps you explore music across different genres and organize your favorite tracks into personalized playlists.
 
-![TuneFolio Screenshot](assets/img/logo/website%20logo.png)
-
 ## ✨ Features
 
 - **🎧 Smart Music Library** - Create and manage custom playlists
