@@ -12,7 +12,7 @@ A modern, responsive web application for music discovery and playlist management
 
 ## 🚀 Live Demo
 
-Check out the live website: [TuneFolio on GitHub Pages](https://g4wb.github.io/TuneFolio/index.html/)
+Check out the live website: [TuneFolio on GitHub Pages](https://g4wb.github.io/TuneFolio/)
 
 ## 📁 Project Structure
 ```
